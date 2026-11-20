@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Energy Smash | Smartphones para ganar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header"><div class="container hd">
+  <a class="logo" href="#top" aria-label="Energy Smash, inicio">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#FFB800" stroke-width="3"/><path d="M19 5 9 19h7l-2 10 11-15h-7z" fill="#E60012"/></svg>
+    Energy<b>Smash</b>
+  </a>
+  <form class="search" id="searchForm" role="search">
+    <input id="q" type="search" placeholder="Busca modelo o marca" aria-label="Buscar smartphones">
+  </form>
+  <nav class="nav" aria-label="Principal">
+    <a href="#ofertas">Ofertas</a><a href="#favoritos">Favoritos</a><a href="#catalogo">Por perfil</a><a href="#accesorios">Accesorios</a><a href="#guias">Guías</a>
+  </nav>
+  <div class="hd-act">
+    <button class="pill" data-a="login" id="userBtn"><span class="av" id="userAvatar">?</span><span id="userLabel">Ingresar</span></button>
+    <button class="pill" data-a="carrito" aria-label="Abrir carrito">Carrito <span id="cartCount" hidden>0</span></button>
+  </div>
+</div></header>
+
+<main id="top">
+
+<section class="hero"><div class="container hero-grid" id="hero"></div></section>
+
+
+<section class="trust"><div class="container"><ul>
+  <li><span>🚚</span><div><b>Envío gratis</b><small>En todos los pedidos</small></div></li>
+  <li><span>🛡️</span><div><b>Garantía de 12 meses</b><small>Directa con el fabricante</small></div></li>
+  <li><span>🔒</span><div><b>Pagos seguros</b><small>Tarjeta, SPEI y efectivo</small></div></li>
+  <li><span>↩️</span><div><b>30 días para devolver</b><small>Sin preguntas</small></div></li>
+</ul></div></section>
+
+
+<section class="sec" id="marcas"><div class="container">
+  <div class="sec-hd"><h2>Elige tu luchador</h2><p class="muted">Toca una marca para filtrar el catálogo.</p></div>
+  <div class="brands" id="brands"></div>
+</div></section>
+
+<section class="sec flash" id="ofertas"><div class="container">
+  <div class="sec-hd"><h2>Arena de ofertas flash</h2>
+    <div class="cd" role="timer" aria-label="Tiempo restante de las ofertas"><span class="cd-l">Terminan en</span><span id="cd-h">00</span>:<span id="cd-m">00</span>:<span id="cd-s">00</span></div></div>
+  <div class="grid" id="flashGrid"></div>
+</div></section>
+
+
+<section class="sec" id="favoritos"><div class="container">
+  <div class="sec-hd"><h2>Favoritos del público</h2><p class="muted">Los cuatro más vendidos del momento.</p></div>
+  <div class="grid" id="favGrid"></div>
+</div></section>
+
+<section class="sec" id="catalogo"><div class="container">
+  <div class="sec-hd"><h2>Encuentra el tuyo por perfil de uso</h2><p class="muted" id="totalModelos"></p></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="grid" id="catGrid"></div>
+  <div class="more" id="catMore"></div>
+</div></section>
+
+<section class="sec" id="accesorios"><div class="container">
+  <div class="sec-hd"><h2>Completa tu equipo</h2></div>
+  <div class="grid" id="accGrid"></div>
+</div></section>
+
+<section class="sec" id="guias"><div class="container">
+  <div class="sec-hd"><h2>Guías para comprar mejor</h2></div>
+  <div class="grid" id="guideGrid"></div>
+</div></section>
+</main>
+
+<footer class="foot"><div class="container">
+  <div class="fg">
+    <div><h3>Boletín Energy Smash</h3><p class="muted">Ofertas flash y lanzamientos antes que nadie.</p>
+      <form class="news" id="news" novalidate>
+        <div class="news-row"><input name="email" type="email" required placeholder="tu@correo.com" aria-label="Correo para el boletín" autocomplete="email"><button class="btn sm">Suscribirme</button></div>
+        <label class="chk"><input type="checkbox" name="consent"><span>Acepto recibir ofertas por correo y el <a href="privacidad.html">aviso de privacidad</a>.</span></label>
+        <p class="news-msg" id="newsMsg" aria-live="polite"></p>
+      </form></div>
+    <div><h3>Comprar</h3><ul><li><a href="#ofertas">Ofertas flash</a></li><li><a href="#catalogo">Smartphones</a></li><li><a href="#accesorios">Accesorios</a></li></ul></div>
+    <div><h3>Ayuda</h3><ul><li><a href="devoluciones.html">Devoluciones y pedidos</a></li><li><a href="devoluciones.html#garantia">Garantía</a></li><li><a href="terminos.html#contacto">Contacto</a></li></ul></div>
+    <div><h3>Legal</h3><ul><li><a href="terminos.html">Términos y condiciones</a></li><li><a href="privacidad.html">Aviso de privacidad</a></li><li><a href="devoluciones.html">Devoluciones</a></li></ul></div>
+  </div>
+  <div class="legal"><span>© <span id="year"></span> Energy Smash</span><span>Los datos de la tienda son de ejemplo.</span></div>
+</div></footer>
+
+
+<dialog id="productDialog" class="dlg" aria-label="Ficha de producto"></dialog>
+
+<dialog id="authDialog" class="dlg"><div class="inner auth">
+  <button class="x" data-close aria-label="Cerrar">✕</button>
+  <div id="authOut"><h2>Entra a la arena</h2><p class="muted">Perfil simulado: los datos se quedan en este navegador.</p>
+    <form id="authForm" novalidate>
+      <label>Correo<input name="email" type="email" autocomplete="email" required></label><p class="err" id="errEmail"></p>
+      <label>Contraseña<input name="password" type="password" autocomplete="current-password" required></label><p class="err" id="errPass"></p>
+      <label class="chk"><input type="checkbox" name="remember" checked> Mantener sesión en este navegador</label>
+      <button class="btn lg block">Entrar</button>
+    </form></div>
+  <div id="authIn" hidden><p class="muted">Sesión iniciada como</p><h2 id="authName"></h2><p class="muted" id="authMail"></p><button class="btn ghost block" id="logout">Cerrar sesión</button></div>
+</div></dialog>
+
+<dialog id="cartDrawer" class="dlg drawer" aria-label="Carrito"><div class="inner">
+  <div class="dh"><h2>Tu carrito</h2><button class="x" data-close aria-label="Cerrar">✕</button></div>
+  <div id="cartLines"></div>
+  <form class="coupon" id="couponForm"><input id="couponInput" placeholder="Cupón (prueba SMASH10)" aria-label="Código de cupón"><button class="btn ghost sm">Aplicar</button></form>
+  <p id="couponMsg" aria-live="polite"></p>
+  <dl class="tot" id="cartTotals"></dl>
+  <button class="btn lg block" id="checkout">Finalizar compra</button>
+</div></dialog>
+
+<div id="toasts" aria-live="polite"></div>
+<aside id="bot" hidden aria-label="SmashBot"><div class="bh"><span>⚡ SmashBot</span><button id="botClose" aria-label="Cerrar chat">✕</button></div><div id="botLog"></div></aside>
+
+<script defer src="js/productos-respaldo.js"></script>
+<script defer src="js/core.js"></script>
+<script defer src="js/cart.js"></script>
+<script defer src="js/auth.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>

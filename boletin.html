@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boletín de ofertas | Energy Smash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header pg-head"><div class="container hd">
+  <a class="logo" href="index.html" aria-label="Energy Smash, inicio"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#FFB800" stroke-width="3"/><path d="M19 5 9 19h7l-2 10 11-15h-7z" fill="#E60012"/></svg>Energy<b>Smash</b></a>
+  <a class="btn sm" href="index.html">Volver a la tienda</a>
+</div></header>
+<main class="container doc">
+
+<h1 id="bTitulo">Boletín de ofertas</h1>
+<p id="bTexto" class="lead">Procesando…</p>
+<p><a class="btn" href="index.html#ofertas">Ver las ofertas flash</a></p>
+
+</main>
+<footer class="foot"><div class="container"><div class="legal"><span>© <span id="year"></span> Energy Smash</span>
+  <nav class="lnks" aria-label="Legal"><a href="terminos.html">Términos y condiciones</a><a href="privacidad.html">Aviso de privacidad</a><a href="devoluciones.html">Devoluciones y garantía</a></nav></div></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+  var e = new URLSearchParams(location.search).get('estado');
+  var m = { confirmado: ['Suscripción confirmada', 'Listo: desde ahora recibirás nuestras ofertas y lanzamientos por correo.'],
+            baja: ['Suscripción cancelada', 'Ya no recibirás más correos de ofertas. Si fue un error, puedes volver a suscribirte desde el pie de la tienda.'],
+            invalido: ['Enlace no válido', 'Este enlace no es válido o ya se usó. Intenta suscribirte de nuevo desde la tienda.'] }[e] || ['Boletín de ofertas', 'Suscríbete desde el pie de la tienda para recibir ofertas.'];
+  document.getElementById('bTitulo').textContent = m[0]; document.getElementById('bTexto').textContent = m[1];
+</script>
+</body>
+</html>

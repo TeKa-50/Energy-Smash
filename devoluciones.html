@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Devoluciones y garantía | Energy Smash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header pg-head"><div class="container hd">
+  <a class="logo" href="index.html" aria-label="Energy Smash, inicio"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#FFB800" stroke-width="3"/><path d="M19 5 9 19h7l-2 10 11-15h-7z" fill="#E60012"/></svg>Energy<b>Smash</b></a>
+  <a class="btn sm" href="index.html">Volver a la tienda</a>
+</div></header>
+<main class="container doc">
+
+<h1>Devoluciones y garantía</h1>
+<p class="meta">Última actualización: 18 de noviembre de 2026</p>
+
+<h2>Devolución en 30 días</h2>
+<p>Si tu compra no te convence, puedes devolverla dentro de los 30 días naturales posteriores a la entrega y te reembolsamos el importe pagado por los artículos.</p>
+<ul>
+  <li>El equipo debe estar sin daños por mal uso y con su caja, accesorios y documentos.</li>
+  <li>Antes de enviarlo, restablécelo de fábrica y quita tu cuenta (Google, Apple u otras), bloqueos, SIM y tarjeta de memoria.</li>
+  <li>Los audífonos y accesorios de uso personal se aceptan con su empaque sellado, salvo que tengan un defecto.</li>
+</ul>
+
+<h2>Cómo funciona</h2>
+<ol>
+  <li>Solicita la devolución en el formulario de esta página con el folio de tu pedido.</li>
+  <li>Revisamos tu solicitud en un plazo estimado de 2 días hábiles y te enviamos las instrucciones de envío.</li>
+  <li>Cuando recibimos y revisamos el equipo, aprobamos el reembolso.</li>
+  <li>Lo devolvemos al mismo método de pago en un plazo estimado de 5 a 10 días hábiles. El costo de envío de la devolución corre a cargo del cliente (salvo que la tienda indique lo contrario), y siempre a cargo de la tienda si el equipo llegó con defecto o no correspondía con lo pedido.</li>
+</ol>
+
+<h2 id="garantia">Garantía de 12 meses</h2>
+<p>Todos los smartphones tienen 12 meses de garantía contra defectos de fabricación, contados desde la entrega. Cubre fallas de hardware y de software de origen. No cubre golpes, humedad, modificaciones, reparaciones por terceros ni desgaste normal. Para reclamarla, solicita una devolución con el motivo «Llegó con defecto» o escribe a <span class="ph">castil@outlook.comlo.miguelteka-50</span> con tu folio.</p>
+<h2>Solicita tu devolución</h2>
+<div class="panel">
+  <p class="muted" id="rmaVacio" hidden>Todavía no hay pedidos en este navegador. Haz una compra en la tienda y vuelve aquí con tu folio.</p>
+  <form id="rmaForm" novalidate hidden>
+    <label>Pedido <select name="folio" id="rmaFolio"></select></label>
+    <fieldset id="rmaLineas"></fieldset>
+    <label>Motivo
+      <select name="motivo"><option>Llegó con defecto</option><option>No es lo que pedí</option><option>Ya no lo quiero</option><option>Otro motivo</option></select></label>
+    <label>Comentarios (opcional)<textarea name="coment" rows="3" maxlength="500"></textarea></label>
+    <label class="chk"><input type="checkbox" name="estado"> Confirmo que el producto está en buen estado y con todos sus accesorios y empaque.</label>
+    <p class="err" id="rmaErr" role="alert"></p>
+    <button class="btn lg">Enviar solicitud</button>
+  </form>
+  <p class="ok" id="rmaOk" role="status" hidden></p>
+</div>
+
+<h2>Mis solicitudes</h2>
+<div id="rmaList"></div>
+
+<h2>Mis pedidos</h2>
+<div id="pedidosList"></div>
+
+</main>
+<footer class="foot"><div class="container"><div class="legal"><span>© <span id="year"></span> Energy Smash</span>
+  <nav class="lnks" aria-label="Legal"><a href="terminos.html">Términos y condiciones</a><a href="privacidad.html">Aviso de privacidad</a><a href="devoluciones.html">Devoluciones y garantía</a></nav></div></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script defer src="js/core.js"></script>
+<script defer src="js/devoluciones.js"></script>
+</body>
+</html>
